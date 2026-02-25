@@ -1,18 +1,17 @@
-﻿public class TwoSum // rename to Solution if copying code to LeetCode
+﻿public class TwoSum
 {
-    public int[] twoSum(int[] nums, int target) // capitalize first letter of method name if copying code to LeetCode
+    public int[] twoSum(int[] nums, int target)
     {
-        int[] indices = [];
         for (int i = 0; i < nums.Length; i++)
         {
             for (int j = i + 1; j < nums.Length; j++)
             {
                 if (nums[i] + nums[j] == target)
                 {
-                    indices = [i, j];
+                    return new int[] { i, j };
                 }
             }
         }
-        return indices;
+        return System.Array.Empty<int>();
     }
 }
